@@ -7,7 +7,7 @@
   (let [uri "datomic.mem://pet-owners-test-db"]
     (d/delete-database uri)
     (d/create-database uri)
-    (let [conn (d/connect uri) schema (load-file "")]
+    (let [conn (d/connect uri) schema (load-file "resources/datomic/schema.edn")]
       (d/transact conn schema)
       conn)))
 
