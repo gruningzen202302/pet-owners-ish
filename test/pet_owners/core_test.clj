@@ -11,3 +11,8 @@
       (d/transact conn schema)
       conn)))
 
+(expect "John"
+        (with-redefs [conn (create-empty-in-memory-db)]
+          (do
+            (add-pet-owner "John")
+            (find-all-pet-owners))))

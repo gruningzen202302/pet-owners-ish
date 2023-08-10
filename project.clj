@@ -5,5 +5,6 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [com.datomic/datomic-free "0.9.5697"]
-                 [expectations "2.1.10"]]
+                 [expectations "2.1.10"]
+                 [lein-autoexpect "1.0"]]
   :repl-options {:init-ns pet-owners.core})
